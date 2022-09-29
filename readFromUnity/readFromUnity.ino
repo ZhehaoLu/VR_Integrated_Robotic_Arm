@@ -5,12 +5,10 @@
 String incoming_string = "";
 String incoming_string1 = "";
 String incoming_string2 = "";
-
 void setup() {
   Serial.begin(115200);
   HWSERIAL.begin(921600);
 }
-
 void loop() {
   if (Serial.available() > 0) {
     incoming_string = Serial.readStringUntil('\n');
